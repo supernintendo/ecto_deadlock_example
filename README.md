@@ -1,20 +1,3 @@
 # EctoDeadlockExample
 
-To start your Phoenix server:
-
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.create && mix ecto.migrate`
-  * Install Node.js dependencies with `cd assets && npm install`
-  * Start Phoenix endpoint with `mix phx.server`
-
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
-
-Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
-
-## Learn more
-
-  * Official website: http://www.phoenixframework.org/
-  * Guides: http://phoenixframework.org/docs/overview
-  * Docs: https://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix
+Example of an application that will not compile due to a module deadlock. The offending code can be found [here](https://github.com/supernintendo/ecto_deadlock_example/blob/master/lib/ecto_deadlock_example/user.ex#L6). See this [issue](https://github.com/elixir-ecto/ecto/issues/2519) for more info. Thanks to [@jkslyby](https://github.com/jkslyby) for finding the exact cause of this.
